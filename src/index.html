@@ -15,12 +15,25 @@
 <body>
     <div id="main_sidebar">
         <img id="main_logo" src="res/CFXS.svg" draggable="false">
+        <!-- <div class="cfxs-h-sep"></div> -->
+        <div class="rel fill flex flex-v" style="height: calc(100% - 3rem);">
+            <div id="device_list_frame" class="flex flex-v">
+                <span>Device</span>
+                <div class="fill scroll-auto-y">
+                </div>
+            </div>
+            <div id="peripheral_list_frame" class="flex flex-v">
+                <span>Peripherals</span>
+                <div class="fill scroll-auto-y">
+                </div>
+            </div>
+        </div>
     </div>
     <div id="main_content">
-        <div id="dsp_filtering">
-            <div id="response_plot" class="cfxs-panel">
-            </div>
-            <div id="levels" class="cfxs-panel">
+        <div id="device_panel">
+            <div id="device_footprint" class="cfxs-panel">
+                <span class="cfxs-panel-title">Device</span>
+                <div class="rel fill" style="height: 10rem; background-color: #111;"></div>
             </div>
         </div>
     </div>

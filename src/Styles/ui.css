@@ -20,6 +20,60 @@
     font-size: 0.8rem;
 }
 
+.cfxs-h-sep {
+    height: 2px;
+    background-color: var(--panel-outline);
+    margin: 0.25rem;
+}
+
+.cfxs-tree {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+}
+
+.cfxs-tree-item {
+    position: relative;
+}
+
+.cfxs-tree-item[selected] {
+    font-weight: bold;
+}
+
+.cfxs-tree-item[selected]::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 0.75rem;
+    transform: translate(-5px, 1px);
+    background: rgb(0, 160, 255);
+}
+
+.cfxs-tree summary,
+.cfxs-tree li {
+    font-family: monospace;
+    font-size: 0.75rem;
+}
+
+.cfxs-tree li::marker {
+    content: '';
+}
+
+.cfxs-tree details>summary::marker {
+    content: '';
+}
+
+.cfxs-tree details>summary::before {
+    display: inline-block;
+    content: '>';
+    margin-right: 0.25rem;
+    transition-duration: 100ms;
+}
+
+.cfxs-tree details[open]>summary::before {
+    transform: rotate(90deg);
+}
+
 /*****************************/
 
 ::-webkit-scrollbar {

@@ -44,7 +44,7 @@ body {
 }
 
 :root {
-    --sidebar-width: 10rem;
+    --sidebar-width: 15rem;
     --main-logo-height: 2rem;
 }
 
@@ -66,6 +66,38 @@ body {
 
 .rel {
     position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-v {
+    flex-direction: column;
+}
+
+.scroll-auto-y {
+    overflow-y: auto;
+}
+
+.scroll-auto-x {
+    overflow-x: auto;
+}
+
+.scroll-hidden-y {
+    overflow-y: hidden;
+}
+
+.scroll-hidden-x {
+    overflow-x: hidden;
+}
+
+.scroll-visible-y {
+    overflow-y: scroll;
+}
+
+.scroll-visible-x {
+    overflow-x: scroll;
 }
 
 .render-pixelated {
@@ -94,7 +126,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    transition-duration: 150ms;
+    transition-duration: 100ms;
 }
 
 #main_content {
@@ -103,5 +135,60 @@ body {
     top: 0;
     right: 0;
     bottom: 0;
-    transition-duration: 150ms;
+    transition-duration: 100ms;
+}
+
+#device_panel {
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#device_footprint {
+    width: 100%;
+    height: 100%;
+}
+
+#device_list_frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 75%;
+    overflow: hidden;
+}
+
+#device_list_frame>span {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    width: 100%;
+    height: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 0.25rem;
+}
+
+#peripheral_list_frame {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#peripheral_list_frame>span {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    width: 100%;
+    height: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 0.25rem;
 }
