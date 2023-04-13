@@ -1,0 +1,44 @@
+.cfxs-panel {
+    background-color: var(--panel-background);
+    border: solid 2px var(--panel-outline);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.cfxs-panel-title {
+    background-color: var(--panel-outline);
+    height: var(--panel-title-height);
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.25rem;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+/*****************************/
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(151, 151, 151);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(195, 195, 195);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.25);
+}

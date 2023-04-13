@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      "module": "esnext", // es6
+      "target": "esnext", // es5
+      "allowJs": true,
+      "moduleResolution": "node"
+    }
+  }
