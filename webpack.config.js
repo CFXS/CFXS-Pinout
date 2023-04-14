@@ -7,7 +7,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: './src/main.ts',
     module: {
         rules: [
@@ -50,30 +50,30 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
     },
-    optimization: {
-        mergeDuplicateChunks: true,
-        mangleExports: true,
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    compress: {
-                        passes: 2,
-                    },
-                    keep_classnames: false,
-                    keep_fnames: false,
-                    toplevel: true,
-                    mangle: {
-                        properties: {
-                            keep_quoted: true,
-                            regex: /^([sm]?_|[A-Z])+/
-                        }
-                    }
-                },
-            }),
-            new CssMinimizerPlugin(),
-        ],
-    },
+    // optimization: {
+    //     mergeDuplicateChunks: true,
+    //     mangleExports: true,
+    //     minimize: true,
+    //     minimizer: [
+    //         new TerserPlugin({
+    //             terserOptions: {
+    //                 compress: {
+    //                     passes: 2,
+    //                 },
+    //                 keep_classnames: false,
+    //                 keep_fnames: false,
+    //                 toplevel: true,
+    //                 mangle: {
+    //                     properties: {
+    //                         keep_quoted: true,
+    //                         regex: /^([sm]?_|[A-Z])+/
+    //                     }
+    //                 }
+    //             },
+    //         }),
+    //         new CssMinimizerPlugin(),
+    //     ],
+    // },
     performance: {
         hints: false,
         maxEntrypointSize: 512000,

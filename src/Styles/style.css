@@ -171,6 +171,7 @@ body {
     height: 1.25rem;
     background-color: rgba(255, 255, 255, 0.1);
     padding-left: 0.25rem;
+    box-shadow: #000 0px 0px 4px;
 }
 
 #peripheral_list_frame {
@@ -191,4 +192,5 @@ body {
     height: 1.25rem;
     background-color: rgba(255, 255, 255, 0.1);
     padding-left: 0.25rem;
+    box-shadow: #000 0px 0px 4px;
 }

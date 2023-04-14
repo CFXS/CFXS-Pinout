@@ -27,32 +27,102 @@
 }
 
 .cfxs-tree {
+    --cfxs_tree_item_height: 1.25rem;
+    --cfxs_tree_base_text_color: rgb(255, 255, 255);
+    --cfxs_tree_line_color: #555;
+
     margin: 0;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem;
 }
 
-.cfxs-tree-item {
+.cfxs-tree details {
     position: relative;
 }
 
-.cfxs-tree-item[selected] {
-    font-weight: bold;
+.cfxs-tree-item {
+    color: var(--cfxs_tree_base_text_color);
+    position: relative;
+    height: var(--cfxs_tree_item_height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
 }
 
-.cfxs-tree-item[selected]::before {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    width: 3px;
-    height: 0.75rem;
-    transform: translate(-5px, 1px);
-    background: rgb(0, 160, 255);
+.cfxs-tree summary {
+    color: var(--cfxs_tree_base_text_color);
+    position: relative;
+    height: var(--cfxs_tree_item_height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.cfxs-tree-item[selected] {
+    color: rgb(255, 255, 255);
+}
+
+.cfxs-tree-item[selected] {
+    color: rgb(255, 253, 123);
+}
+
+.cfxs-tree ul {
+    padding-left: 1rem;
 }
 
 .cfxs-tree summary,
 .cfxs-tree li {
     font-family: monospace;
     font-size: 0.75rem;
+}
+
+.cfxs-tree li summary:hover,
+.cfxs-tree li:not(:has(details)):hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.25rem;
+}
+
+.cfxs-tree li,
+.cfxs-tree summary {
+    padding-left: 0.25rem;
+}
+
+.cfxs-tree li:not(:has(details)) {
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.cfxs-tree li:not(:has(details))::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: var(--cfxs_tree_line_color);
+    top: calc(var(--cfxs_tree_item_height)/2);
+    left: -0.85rem;
+    width: 0.85rem;
+}
+
+/* .cfxs-tree details[open] li::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    left: -0.88rem;
+    width: 1px;
+    background-color: #555;
+    top: 0;
+    bottom: 0;
+} */
+
+.cfxs-tree details[open] ul::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    left: 3px;
+    width: 1px;
+    background-color: var(--cfxs_tree_line_color);
+    top: var(--cfxs_tree_item_height);
+    bottom: calc(var(--cfxs_tree_item_height)/2);
 }
 
 .cfxs-tree li::marker {
